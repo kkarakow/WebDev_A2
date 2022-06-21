@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<head>
+    <title>Kate's Pizza</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script type="text/javascript" src="js/js/script.js"></script>
+</head>
+
+<body>
+ 
+    <div class="header">
+        <img src="images/Katepizza.jpg" width="auto" height="auto">
+        </div>
+        <div class="formContainer">
+            <h1>Order Your Pizza!</h1>
+            <form name="pizzaform" method="GET" autocomplete="off">
+                Last Name: <input type="text" name="txtLastName" id="txtLastName" autofocus placeholder="Doe"><br>
+                <span id="msgln"></span>
+                First Name: <input type="text" name="txtFirstName" id="txtFirstName" placeholder="John"><br>
+                <span id="msgfn"></span>
+                Phone Number: <input type="text" name="txtPhoneNumber" id="txtPhoneNumber" placeholder="(123) 456-7891"><br>
+                <span id="msgpn"></span>
+
+                <label>Pizza size: </label>
+                <label><input type="radio" name="pizzaSize" value="Small" id="pizzaSize">Small</label>
+                <label><input type="radio" name="pizzaSize" value="Medium" id="pizzaSize">Medium</label>
+                <label><input type="radio" name="pizzaSize" value="Large" id="pizzaSize">Large</label><br>
+
+                <label>Pizza crust: </label>
+                <label><input type="radio" name="pizzaCrust" value="Thin" id="pizzaCrust">Thin</label>
+                <label><input type="radio" name="pizzaCrust" value="HandTosed" id="pizzaCrust">Hand Tosted</label>
+                <label><input type="radio" name="pizzaCrust" value="Regular" id="pizzaCrust">Regular</label><br>
+
+                <label>Pizza Type: </label>
+                <label><input type="radio" name="pizzaType" value="VegLovers" id="pizzaType">Veg Lovers</label>
+                <label><input type="radio" name="pizzaType" value="Pepperoni" id="pizzaType">Pepperoni</label>
+                <label><input type="radio" name="pizzaType" value="Cheese" id="pizzaType">Cheese</label><br>
+
+                Select Your Drink
+                <select name="selectDrink" id="drink">
+                    <option value="Coke">Coke</option>
+                    <option value="Sprite" >Sprite</option>
+                    <option value="CanadaDry">Canada Dry</option>
+                </select><br>
+
+                <button type="button" id="calcuate" value="Submit" onclick=validate()>Calcuate price</button><br>
+                <input type="reset"id="btnReset" value="Reset" onclick="document.location.reload(true)">
+                <br>
+
+                <label id="subtotal"></label>
+                <label id="tax"></label>
+                <label id="total"></label>
+            </form>
+            <p></p><br>
+        </div>
+        
+    </div>
+
+</body>
+</html>
